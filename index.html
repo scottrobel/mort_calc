@@ -2,69 +2,69 @@
     <head>
         <script src="./LifeFunctions.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./style.css">
     </head>
-    <body>
-        <div class="top-title">LifeSpan Calculator</div>
-        <div class="top-center">
-            <div id="years-left">Enter Your Data</div>
-        </div>
-        <div class="form-container">
-            <div class="input-container">
-
-                <div class="label">Current Age</div>
-                <input type="number" id="age-field" min="1" max="119">
-                <div class="label">Gender</div>
-                <select id="gender">
+    <body class="bg-gray-400 m-0">
+        <div class="top-title font-serif text-center bg-white text-gray-700 text-5xl">LifeSpan Calculator</div>
+        <div class="mx-auto mt-16 w-full max-w-xs">
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="text-2xl text-center text-gray-700 font-bold mb-2" id="years-left">Enter Your Data</div>
+                <div class="mb-4">
+                    <div class="block text-gray-700 text-sm font-bold mb-2">Current Age</div>
+                    <input  class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="number" id="age-field" min="1" max="119">
+                </div>
+                <div class="block text-gray-700 text-sm font-bold mb-2">Gender</div>
+                <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="gender">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
-                <div class="label">Country</div>
-                <select id="country-codes">
-                        <option value="AUS">Australia</option>
-                        <option value="FIN">Finland</option>
-                        <option value="LVA">Latvia</option>
-                        <option value="SVN">Slovenia</option>
-                        <option value="AUT">Austria</option>
-                        <option value="FRATNP">France</option>
-                        <option value="LTU">Lithuania</option>
-                        <option value="ESP">Spain</option>
-                        <option value="BLR">Belarus</option>
-                        <option value="DEUTNP">Germany</option>
-                        <option value="LUX">Luxembourg</option>
-                        <option value="SWE">Sweden</option>
-                        <option value="BEL">Belgium</option>
-                        <option value="GRC">Greece</option>
-                        <option value="NLD">Netherlands</option>
-                        <option value="CHE">Switzerland</option>
-                        <option value="BGR">Bulgaria</option>
-                        <option value="HKG">Hong Kong</option>
-                        <option value="NZL_NP">New Zealand</option>
-                        <option value="TWN">Taiwan</option>
-                        <option value="CAN">Canada</option>
-                        <option value="HUN">Hungary</option>
-                        <option value="NOR">Norway</option>
-                        <option value="GBR_NP">U.K.</option>
-                        <option value="CHL">Chile</option>
-                        <option value="ISL">Iceland</option>
-                        <option value="POL">Poland</option>
-                        <option value="USA">U.S.A.</option>
-                        <option value="HRV">Croatia</option>
-                        <option value="IRL">Ireland</option>
-                        <option value="PRT">Portugal</option>
-                        <option value="UKR">Ukraine</option>
-                        <option value="CZE">Czechia</option>
-                        <option value="ISR">Israel</option>
-                        <option value="KOR">Republic of Korea</option>
-                        <option value="DNK">Denmark</option>
-                        <option value="ITA">Italy</option>
-                        <option value="RUS">Russia</option>
-                        <option value="EST">Estonia</option>
-                        <option value="JPN">Japan</option>
-                        <option value="SVK">Slovakia</option>
-                </select>
-            </div>    
-                <button onclick="displayLifeSpan()">See Your Estimated Remaining Lifespan</button>
+                <div class="block text-gray-700 text-sm font-bold mb-2">Country</div>
+                <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="country-codes">
+                    <option value="AUS">Australia</option>
+                    <option value="FIN">Finland</option>
+                    <option value="LVA">Latvia</option>
+                    <option value="SVN">Slovenia</option>
+                    <option value="AUT">Austria</option>
+                    <option value="FRATNP">France</option>
+                    <option value="LTU">Lithuania</option>
+                    <option value="ESP">Spain</option>
+                    <option value="BLR">Belarus</option>
+                    <option value="DEUTNP">Germany</option>
+                    <option value="LUX">Luxembourg</option>
+                    <option value="SWE">Sweden</option>
+                    <option value="BEL">Belgium</option>
+                    <option value="GRC">Greece</option>
+                    <option value="NLD">Netherlands</option>
+                    <option value="CHE">Switzerland</option>
+                    <option value="BGR">Bulgaria</option>
+                    <option value="HKG">Hong Kong</option>
+                    <option value="NZL_NP">New Zealand</option>
+                    <option value="TWN">Taiwan</option>
+                    <option value="CAN">Canada</option>
+                    <option value="HUN">Hungary</option>
+                    <option value="NOR">Norway</option>
+                    <option value="GBR_NP">U.K.</option>
+                    <option value="CHL">Chile</option>
+                    <option value="ISL">Iceland</option>
+                    <option value="POL">Poland</option>
+                    <option value="USA">U.S.A.</option>
+                    <option value="HRV">Croatia</option>
+                    <option value="IRL">Ireland</option>
+                    <option value="PRT">Portugal</option>
+                    <option value="UKR">Ukraine</option>
+                    <option value="CZE">Czechia</option>
+                    <option value="ISR">Israel</option>
+                    <option value="KOR">Republic of Korea</option>
+                    <option value="DNK">Denmark</option>
+                    <option value="ITA">Italy</option>
+                    <option value="RUS">Russia</option>
+                    <option value="EST">Estonia</option>
+                    <option value="JPN">Japan</option>
+                    <option value="SVK">Slovakia</option>
+                </select>  
+                <button class="mt-8 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onclick="displayLifeSpan()">See Your Estimated Remaining Lifespan</button>
+            </form>
         </div>
     </body>  
 </html>
